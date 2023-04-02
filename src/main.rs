@@ -78,12 +78,13 @@ fn main() {
     let initial_state = random.iter().cloned().collect();
 
     let mut game = GameOfLife::new(width, height, initial_state, 150, true);
-    // for _ in 0..100 {
-    // game.print();
-    // game.evolve();
-    // }
-    loop {
+    for _ in 0..100 {
         game.print();
         game.evolve();
     }
+    println!("{}", game);
+    // loop {
+    //     game.print();
+    //     game.evolve();
+    // }
 }
