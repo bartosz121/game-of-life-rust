@@ -113,11 +113,13 @@ impl Display for GameOfLife {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         write!(
             f,
-            "GameOfLife({}, {}, {}, {})",
+            "GameOfLife({}, {}, {}, {}, {}, {})",
             self.width,
             self.height,
             self.generation,
-            self.alive_hashset.len()
+            self.alive_hashset.len(),
+            self.tickrate_ms,
+            self.use_tickrate
         )
     }
 }
